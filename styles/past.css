@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap&subset=cyrillic");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: "Lora", serif;
+  color: #262933;
+  background: #f3fafb;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #262933;
+  scroll-snap-align: start;
+}
+
+header .header-main-wrap {
+  height: 30vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-main-wrap .who {
+  text-align: right;
+  width: 60vw;
+  -webkit-animation-name: fade-in-fleft 1.2s;
+          animation-name: fade-in-fleft 1.2s;
+  overflow: hidden;
+}
+
+header .header-main-wrap .who h1 {
+  display: block;
+  width: 100%;
+  background: #f3fafb;
+  padding: 10px;
+  font-size: 2rem;
+}
+
+header .header-main-wrap .who .name {
+  color: #f3fafb;
+  font-size: 1.5rem;
+  position: relative;
+  top: 5vh;
+  font-weight: 500;
+}
+
+header .header-main-wrap .img-me {
+  height: 30vh;
+  width: 30vh;
+  border-radius: 15vh;
+  background-image: url("../imgs/me.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+  -webkit-animation-name: fade-in-fright;
+          animation-name: fade-in-fright;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+header #arrow {
+  position: absolute;
+  bottom: 10vh;
+  width: 100px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-name: fade-in-fbelow;
+          animation-name: fade-in-fbelow;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 10px;
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+section h2 {
+  font-size: 1.7rem;
+  margin: 10px 5px;
+}
+
+section p {
+  line-height: 1.5;
+}
+
+section figure {
+  width: 60%;
+  display: block;
+  margin: 10px auto;
+}
+
+section figure img {
+  width: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  header .img-me {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+  * {
+    font-size: 14px;
+  }
+  header .header-main-wrap .who {
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header .header-main-wrap {
+    position: absolute;
+    top: 15vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+  }
+  header .header-main-wrap .who {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 83.7vw;
+  }
+  header .header-main-wrap .img-me {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  * {
+    font-size: 12px;
+  }
+  header .header-main-wrap * {
+    margin: 10px 0;
+  }
+  header .header-main-wrap .who {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  header .header-main-wrap .who h1 {
+    font-size: 1.7rem;
+  }
+  header .header-main-wrap .who .name {
+    font-size: 1.4rem;
+  }
+  header .header-main-wrap .img-me {
+    width: 40vw;
+    height: 40vw;
+    border-radius: 20vw;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+/*# sourceMappingURL=past.css.map */

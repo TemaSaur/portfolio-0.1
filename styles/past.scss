@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700&display=swap&subset=cyrillic');
+
+
+$white: #f3fafb;
+$black: #262933;
+
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+html{
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+body{
+	font-family: "Lora", serif;
+	color: $black;
+	background: $white;
+}
+
+header{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: $black;
+	scroll-snap-align: start;
+
+	.header-main-wrap{
+		height: 30vh;
+		width: 100%;
+		display: flex;
+
+		.who{
+			text-align: right;
+			width: 60vw;
+			animation-name: fade-in-fleft 1.2s;
+			overflow: hidden;
+
+			h1{
+				display: block;
+				width: 100%;
+				background: $white;
+				padding: 10px;
+				font-size: 2rem;
+			}
+
+			.name{
+				color: $white;
+				font-size: 1.5rem;
+				position: relative;
+				top: 5vh;
+				font-weight: 500;
+			}
+		}
+		
+		.img-me{
+			height: 30vh;
+			width: 30vh;
+			border-radius: 15vh;
+			background-image: url("../imgs/me.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+			margin: 0 auto;
+			animation-name: fade-in-fright;
+			animation-duration: 1.2s;
+		}
+	}
+
+	#arrow{
+		position: absolute;
+		bottom: 10vh;
+		width: 100px;
+		transform: translateX(-50%);
+		animation-name: fade-in-fbelow;
+		animation-duration: 1.2s;
+	}
+}
+
+.container{
+	width: 100%;
+	max-width: 1400px;
+	margin: 0 auto;
+}
+section{
+	padding: 10px;
+	width: 100%;
+	scroll-snap-align: start;
+
+	h2{
+		font-size: 1.7rem;
+		margin: 10px 5px;
+	}
+
+	p{
+		line-height: 1.5;
+	}
+
+	figure{
+		width: 60%;
+		display: block;
+		margin: 10px auto;
+		img{
+			width: 100%;
+		}
+	}
+}
+
+
+@media screen and (min-width: 900px){
+	header .img-me{
+		position: relative;
+	}
+}
+
+@media screen and (max-width:1085px){
+	*{
+		font-size: 14px;
+	}
+	header .header-main-wrap .who{
+		width: 65vw;
+	}
+}
+
+
+@media screen and (max-width:900px){
+	header{
+		.header-main-wrap{
+			position: absolute;
+			top: 15vh;
+			display: flex;
+			flex-direction: column;
+			height: auto;
+
+			.who{
+				order: 2;
+				width: 83.7vw;
+			}
+			.img-me{
+				order: 1;
+				margin-bottom: 20px;
+			}
+		}
+	}    
+}
+
+
+@media screen and (max-width:450px){
+	*{
+		font-size: 12px;
+	}
+
+	header{
+		.header-main-wrap{
+			*{
+				margin: 10px 0;
+			}
+			.who{
+				order: 2;
+				h1{
+					font-size: 1.7rem;
+				}
+				.name{
+					font-size: 1.4rem;
+				}
+			}
+			.img-me{
+				width: 40vw;
+				height: 40vw;
+				border-radius: 20vw;
+				order: 1;
+			}
+		}
+	}
+}
